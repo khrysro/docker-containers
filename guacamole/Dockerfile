@@ -82,7 +82,8 @@ RUN cd /tmp && \
 ### Install precompiled client webapp
 RUN cd /var/lib/tomcat7/webapps && \
     rm -Rf ROOT && \
-    wget -q --span-hosts http://sourceforge.net/projects/guacamole/files/current/binary/guacamole-${GUAC_VER}.war && \
+####wget -q --span-hosts http://sourceforge.net/projects/guacamole/files/current/binary/guacamole-${GUAC_VER}.war && \
+    wget  http://sourceforge.net/projects/guacamole/files/current/binary/guacamole-${GUAC_VER}.war && \
     ln -s guacamole-$GUAC_VER.war ROOT.war && \
     ln -s guacamole-$GUAC_VER.war guacamole.war
 
